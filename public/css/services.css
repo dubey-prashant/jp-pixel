@@ -1,0 +1,149 @@
+.services-main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services .box {
+  background-color: #fff;
+  overflow: hidden;
+  transition: .3s ease;
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.services .box i {
+  text-align: center;
+  color: #dd2222;
+  transition: inherit;
+  transition-delay: 0s;
+  margin: 0 auto 10px;
+}
+
+.services h4 {
+  color: #222;
+  font-size: 18px;
+  transition: inherit;
+  transition-delay: .05s;
+  margin: 5px auto;
+}
+
+.services p {
+  color: #1F1F1F;
+  transition: inherit;
+  transition-delay: .1s;
+  margin-bottom: 4px;
+}
+
+.readmore {
+  color: #333;
+  overflow: hidden;
+  display: inline-block;
+  font-size: .75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.readmore:before {
+  animation: ts-link-arrow-effect-animation-out;
+  animation-fill-mode: forwards;
+  animation-duration: .4s;
+  animation-timing-function: cubic-bezier(.6, .01, 0, 1);
+  background-color: #dd2222;
+  bottom: 0;
+  height: .125rem;
+  margin: auto;
+  left: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: scaleX(.2);
+  transform-origin: left center;
+  z-index: 0;
+}
+
+.readmore span {
+  position: relative;
+  transform: translateX(-200%);
+  display: inline-block;
+  transition: .6s cubic-bezier(.6, .01, 0, 1);
+}
+
+.box:hover .readmore span {
+  transform: translateX(0%);
+}
+
+.box:hover .readmore:before {
+  animation: ts-link-arrow-effect-animation-in;
+  animation-fill-mode: forwards;
+  animation-duration: .4s;
+  animation-timing-function: cubic-bezier(.6, .01, 0, 1);
+}
+
+.box:hover i,
+.box:hover h4,
+.box:hover p {
+  transform: translateY(-0.625rem);
+}
+
+@keyframes ts-link-arrow-effect-animation-out {
+  0% {
+    transform-origin: right center;
+    transform: scaleX(.2);
+  }
+
+  70% {
+    transform-origin: right center;
+  }
+
+  71% {
+    transform-origin: left center;
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform-origin: left center;
+    transform: scaleX(.2);
+  }
+}
+
+@keyframes ts-link-arrow-effect-animation-in {
+  0% {
+    transform-origin: left center;
+    transform: scaleX(.2);
+  }
+
+  70% {
+    transform-origin: left center;
+    transform: scaleX(1);
+  }
+
+  71% {
+    transform-origin: right center;
+  }
+
+  100% {
+    transform-origin: right center;
+    transform: scaleX(.2);
+  }
+}
+
+@media screen and (min-width:720px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width:900px) {
+
+  .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,77 @@
+.carousel-cell {
+  background: #fff;
+  color: #000;
+  width: 100%;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.review {
+  padding: 0 10px;
+}
+
+.review h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.review p {
+  font-size: 16px;
+}
+
+.carousel-cell .customer {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+@media screen and (min-width:500px) {
+  .carousel-cell {
+    width: 90%;
+    margin-right: 8%;
+    padding: 15px;
+  }
+
+  .review h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .review p {
+    font-size: 18px;
+  }
+
+  .customer {
+    margin: 15px auto;
+  }
+}
+
+@media screen and (min-width:750px) {
+  .carousel-cell {
+    width: 80%;
+    margin-right: 10%;
+  }
+
+  .customer {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .carousel-cell {
+    width: 60%;
+  }
+
+  .customer {
+    margin: 25px auto;
+  }
+
+}

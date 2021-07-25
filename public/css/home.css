@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+.cover {
+  background: url("/images/cover-bg-sm.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cover-overlay {
+  background: rgba(10, 17, 10, 0.70);
+  color: #fff;
+}
+
+.cover-text {
+  min-height: 50vh;
+  padding: 10vh 0;
+}
+
+.cover-text h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 34px;
+  margin: 20px auto;
+}
+
+.cta-btns {
+  padding: 20px 0;
+  height: 30vh;
+}
+
+.cta-btns button {
+  display: block;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 30px;
+  line-height: 50px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  margin: 20px auto;
+  padding: 0 30px;
+}
+
+.contact-btn {
+  background: #fc5f45;
+}
+
+.contact-btn:hover,
+.contact-btn:focus,
+.contact-btn:active {
+  background: #f34123;
+}
+
+.about-btn {
+  background: #38c695;
+}
+
+.about-btn:hover,
+.about-btn:focus,
+.about-btn:active {
+  background: #00ba78;
+}
+
+.feature-item {
+  margin: 20px auto;
+}
+
+.feature-item i {
+  color: #fc5f45;
+  font-size: 35px;
+  margin: 20px auto;
+}
+
+.feature-item p {
+  text-transform: uppercase;
+  color: #fc5f45;
+  font-size: 18px;
+}
+
+@media screen and (min-width:768px) {
+  .cover {
+    background: url("/images/cover-bg.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+  }
+
+  .cover-overlay {
+    height: 100%;
+  }
+
+  .cover-text {
+    height: 100%;
+    padding: 20vh 0;
+    margin: 0;
+  }
+
+  .cover-text h1 {
+    font-size: 50px;
+    font-family: serif;
+  }
+
+  .features,
+  .cta-btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .feature-item i {
+    font-size: 40px;
+    margin: 20px auto;
+  }
+
+  .feature-item p {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .cta-btns {
+    max-width: 400px;
+    margin: 30px auto 20;
+  }
+}
+
+/* COVER CSS END */
+
+
+/* services */
+section.services {
+  background: #ee3333;
+  padding: 30px 0;
+}
+
+section.services .section-title,
+section.testimonials .section-title {
+  color: #fff;
+}
+
+/* about */
+section.about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  max-width: 1200px;
+}
+
+section.about .section-title,
+section.works .section-title {
+  color: #ee3333;
+}
+
+/* works */
+section.works {
+  padding: 30px 0;
+  background: #f1f1f1;
+}
+
+/* testimonials */
+
+section.testimonials {
+  padding: 30px 0 70px;
+  background: #e33;
+}
+
+/* CTA */
+section.cta {
+  padding: 70px 0;
+}
+
+section.cta h2 {
+  font-size: 24px;
+}
+
+section.cta button {
+  display: block;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 30px;
+  line-height: 50px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  margin: 20px auto;
+  padding: 0 30px;
+  background: #d22;
+}
+
+section.cta button:hover {
+  background: #b00;
+}
+
+@media screen and (min-width:768px) {
+
+  section.cta button,
+  section.cta h2 {
+    display: inline-block;
+    margin: 30px;
+  }
+}
+
+/* CTA end */

@@ -1,0 +1,21 @@
+<!-- WORKS CSS -->
+<link rel="stylesheet" href="/css/works.css">
+
+<!-- work section -->
+<div class="container">
+  <h1 class="section-title">OUR PREVIOUS WORKS</h1>
+  <div class="work-list">
+    <% for( let i = 1; i < 10; i++ ) { %>
+    <div data-aos="zoom-in-down" class="work-item">
+      <img src="/images/works/work<%=i%>.jpg" alt="">
+      <div class="work-content">
+        <h3>Work title</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quasi ut repellat ipsam voluptatibus
+          ratione consequuntur harum dignissimos, debitis officiis!
+        </p>
+        <button>VIEW MORE</button>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>

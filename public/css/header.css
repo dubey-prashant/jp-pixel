@@ -1,0 +1,235 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+  background: #ee3333;
+}
+
+header .Navbar {
+  height: 50px;
+  max-width: 1200px;
+  /* same as container in main.css */
+  margin: 0 auto;
+}
+
+header .brand {
+  height: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+#ham-icon {
+  width: 25px;
+  height: 23px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer
+}
+
+#ham-icon span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  border-radius: 5px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out
+}
+
+#ham-icon:hover span {
+  background: #fff;
+}
+
+
+#ham-icon span:first-child {
+  top: 0px;
+  background: #fff;
+
+}
+
+#ham-icon span:nth-child(2) {
+  top: 9px;
+  background: #fff;
+
+}
+
+#ham-icon span:nth-child(3) {
+  top: 18px;
+  background: #fff;
+
+}
+
+#ham-icon.open span:first-child {
+  top: 9px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg)
+}
+
+#ham-icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -25px
+}
+
+#ham-icon.open span:nth-child(3) {
+  top: 9px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg)
+}
+
+header .brand h1 {
+  line-height: 38px;
+  font-size: 34px;
+  margin: 0;
+  color: #fff;
+  font-family: "Courier new", monospace, sans-serif;
+  font-weight: 900
+}
+
+header .brand h1:active,
+header .brand h1:hover {
+  color: #eee;
+}
+
+header .nav {
+  display: none;
+  text-align: center;
+  padding: 5px;
+  margin-top: 1px
+}
+
+header .nav a {
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  margin: 5px auto;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400
+}
+
+header .nav a:active,
+header .nav a:hover {
+  background: #ee3333;
+  opacity: 0.6;
+  color: #fff;
+}
+
+header .showNav {
+  display: block;
+  background: #ee3333;
+  border-top: 1px solid #fff;
+  margin: 0;
+}
+
+@media screen and (min-width:864px) {
+  .showNav {
+    border: none;
+  }
+
+  #ham-icon {
+    display: none
+  }
+
+  header .brand {
+    padding: 0;
+  }
+
+  header .brand h1 {
+    line-height: 40px;
+    font-size: 40px;
+  }
+
+  header .Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+    height: 60px;
+  }
+
+  header .nav {
+    margin: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    background: transparent
+  }
+
+  header .nav a {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    color: #fff;
+  }
+
+  header .nav a:hover {
+    background: transparent;
+    color: #fff;
+  }
+
+  header .nav a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    /* transform-origin: bottom right; */
+    transition: transform 0.25s ease-out;
+  }
+
+  header .nav a:hover:after {
+    transform: scaleX(1);
+    /* transform-origin: bottom left; */
+  }
+
+
+}
+
+@media screen and (min-width:1100px) {
+  header .brand h1 {
+    line-height: 45px;
+    font-size: 45px
+  }
+
+  header .nav {
+    width: 50%
+  }
+
+  header .nav a {
+    font-size: 18px;
+    line-height: 20px
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header .Navbar {
+    padding: 0;
+  }
+}
+
+.displayNav {
+  top: 0;
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s
+}
