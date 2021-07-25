@@ -4,7 +4,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 100000;
-  background: #ee3333;
+  background: var(--primaryColor);
 }
 
 header .Navbar {
@@ -122,15 +122,15 @@ header .nav a {
 
 header .nav a:active,
 header .nav a:hover {
-  background: #ee3333;
+  background: var(--primaryColor);
   opacity: 0.6;
   color: #fff;
 }
 
 header .showNav {
   display: block;
-  background: #ee3333;
-  border-top: 1px solid #fff;
+  background: var(--primaryColor);
+  border-top: 1px solid var(--white);
   margin: 0;
 }
 

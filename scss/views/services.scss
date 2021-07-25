@@ -6,7 +6,7 @@
 }
 
 .services .box {
-  background-color: #fff;
+  background-color: var(--secondaryColor);
   overflow: hidden;
   transition: .3s ease;
   padding: 20px;
@@ -23,7 +23,7 @@
 }
 
 .services h4 {
-  color: #222;
+  color: var(--textColor);
   font-size: 18px;
   transition: inherit;
   transition-delay: .05s;
@@ -31,7 +31,7 @@
 }
 
 .services p {
-  color: #1F1F1F;
+  color: var(--textColor);
   transition: inherit;
   transition-delay: .1s;
   margin-bottom: 4px;

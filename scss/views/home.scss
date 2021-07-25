@@ -11,6 +11,12 @@
   color: #fff;
 }
 
+.darkmode {
+  section.cover .cover-overlay {
+    color: rgb(0, 0, 0, 0.8);
+  }
+}
+
 .cover-text {
   min-height: 50vh;
   padding: 10vh 0;
@@ -20,6 +26,7 @@
   font-family: 'Libre Baskerville', serif;
   font-size: 34px;
   margin: 20px auto;
+  color: #fff;
 }
 
 .cta-btns {
@@ -131,7 +138,7 @@
 
 /* services */
 section.services {
-  background: #ee3333;
+  background: var(--primaryColor);
   padding: 30px 0;
 }
 
@@ -146,26 +153,26 @@ section.about {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f1f1f1;
+  background-color: var(--white);
   max-width: 1200px;
 }
 
 section.about .section-title,
 section.works .section-title {
-  color: #ee3333;
+  color: var(--primaryTitle);
 }
 
 /* works */
 section.works {
   padding: 30px 0;
-  background: #f1f1f1;
+  background: var(--secondary-bg);
 }
 
 /* testimonials */
 
 section.testimonials {
   padding: 30px 0 70px;
-  background: #e33;
+  background: var(--primaryColor);
 }
 
 /* CTA */
@@ -189,7 +196,7 @@ section.cta button {
   letter-spacing: 0px;
   margin: 20px auto;
   padding: 0 30px;
-  background: #d22;
+  background: #e33;
 }
 
 section.cta button:hover {

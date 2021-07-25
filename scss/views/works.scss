@@ -7,11 +7,11 @@
 
 .work-item img {
   width: 100%;
-  border-bottom: 3px solid #e33;
+  border-bottom: 3px solid var(--primaryColor);
 }
 
 .work-content {
-  background: #fff;
+  background: var(--secondaryColor);
   color: #000;
   width: 100%;
   height: 100%;
@@ -23,7 +23,7 @@
 
 .work-item:hover .work-content {
   bottom: 0;
-  border-top: 3px solid #e33;
+  border-top: 3px solid var(--primaryColor);
 }
 
 .work-content h3 {
@@ -36,7 +36,7 @@
 }
 
 .work-content button {
-  background: linear-gradient(#ee3333, #ff4444);
+  background: linear-gradient(var(--primaryColor), #ff4444);
   border: 2px solid #c11111;
   color: #fff;
   cursor: pointer;
