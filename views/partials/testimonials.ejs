@@ -3,27 +3,20 @@
 <!-- FLICKITY JavaScript -->
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
-<% let reviews = ['Best services','On time delivery', 'Value for money', 'Loved the sevices', 'Better than everthing'] %>
-<% let users =['Joban Singh', 'Rohit Gupta',' Prashant Dubey', 'Ayush Sharma', 'Sarfaraj Ansari'] %>
-
 <div class="container">
   <h2 class="section-title">Testimonials</h2>
   <div class="carousel js-flickity" data-flickity-options='{ "wrapAround": true }'>
-
-    <% for( let i = 0; i < 5; i++ ) { %>
+    <% for( let i = 0; i < testimonials.length; i++ ) { %>
     <div class="carousel-cell">
       <div class="review">
-        <h3><%= reviews[i] %> </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorum corporis sequi quos recusandae sunt
-          iste quia aut voluptatem accusamus similique unde non dicta sint, ab dignissimos quis minima a eligendi illo
-          ullam ad. Beatae illum fuga a harum consequuntur.</p>
+        <h3><%= testimonials[i].reviewTitle %></h3>
+        <p><%= testimonials[i].reviewText %></p>
       </div>
       <div class="customer">
         <img src="/images/customers/c<%= i + 1 %>.jpg" alt="customer">
-        <h4> <%= users[i] %> </h4>
+        <h4> <%= testimonials[i].customerName %> </h4>
       </div>
     </div>
     <% } %>
-
   </div>
 </div>

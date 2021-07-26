@@ -127,6 +127,8 @@ body {
 ::-webkit-scrollbar {
   width: 15px;
   background: #222;
+  border-radius: 10px;
+
 }
 
 /* Track */
@@ -137,11 +139,11 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--primaryColor);
+  background: #b30000;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
+  background: #a20000;
 }

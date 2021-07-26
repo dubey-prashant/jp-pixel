@@ -2,15 +2,13 @@
 <div class="container">
   <h1 class="section-title">OUR PREVIOUS WORKS</h1>
   <div class="work-list">
-    <% for( let i = 1; i < 10; i++ ) { %>
+    <% for( let i = 0; i < works.length; i++ ) { %>
     <div data-aos="zoom-in-down" class="work-item">
-      <img src="/images/works/work<%=i%>.jpg" alt="">
+      <img src="/images/works/work<%=i+1%>.jpg" alt="<%= works[i].title %>">
       <div class="work-content">
-        <h3>Work title</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quasi ut repellat ipsam voluptatibus
-          ratione consequuntur harum dignissimos, debitis officiis!
-        </p>
-        <a href="#"><button>VIEW MORE</button></a>
+        <h3><%= works[i].title %> </h3>
+        <p> <%= works[i].info %> </p>
+        <a href="<%=works[i].url%>"><button>VIEW MORE</button></a>
       </div>
     </div>
     <% } %>
