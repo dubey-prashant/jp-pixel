@@ -122,3 +122,26 @@ body {
 @import "./views/testimonials.scss";
 @import "./views/contact.scss";
 @import "./views/footer.scss";
+
+// SCROLL background
+::-webkit-scrollbar {
+  width: 15px;
+  background: #222;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primaryColor);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}

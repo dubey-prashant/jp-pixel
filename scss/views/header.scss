@@ -3,7 +3,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100000;
+  z-index: 100;
   background: var(--primaryColor);
 }
 
@@ -88,7 +88,7 @@ header .brand {
 }
 
 header .brand h1 {
-  line-height: 38px;
+  line-height: 32px;
   font-size: 34px;
   margin: 0;
   color: #fff;
