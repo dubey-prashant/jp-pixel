@@ -1,0 +1,92 @@
+.mein {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #abbaab;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #abbaab);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.one {
+  width: 50%;
+  padding: 0px 0px 0px 40px;
+}
+
+.two {
+  width: 50%;
+  text-align: center;
+}
+
+.one iframe {
+  width: 100%;
+  height: 70vh;
+  border-radius: 10px;
+
+}
+
+.two form {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.two form input {
+  width: 70%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.two form textarea {
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.two form button {
+  width: 25%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #200122;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6f0000, #200122);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6f0000, #200122);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+@media screen and (max-width:768px) {
+  .mein {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .one {
+    width: 100%;
+    padding: 30px;
+
+  }
+
+  .two {
+    width: 100%;
+  }
+}

@@ -7,8 +7,8 @@
     <div class="cover-text">
       <h1>We understand your requirements!</h1>
       <div class="cta-btns">
-        <button class="contact-btn">CONTACT US</button>
-        <button class="about-btn">ABOUT US</button>
+        <a href="#contact"><button class="contact-btn">CONTACT US</button></a>
+        <a href="#about"> <button class="about-btn">ABOUT US</button></a>
       </div>
       <div class="features">
         <div data-aos="zoom-in-up" class="feature-item">
@@ -29,7 +29,7 @@
 </section>
 
 <!-- ABOUT US -->
-<section class="about">
+<section id="#about" class="about">
   <%- include("./partials/about.ejs") %>
 </section>
 <!-- SERVICES -->
@@ -51,5 +51,11 @@
   <h2 data-aos="fade-right">Start your journey with us now</h2>
   <a href="#contact"><button data-aos="fade-left">Get started</button></a>
 </section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <%- include("./partials/contact.ejs")  %>
+</section>
+
 <!-- FOOTER -->
 <%- include("./partials/footer.ejs") %>
