@@ -1,34 +1,26 @@
-.mein {
-  width: 100%;
-  height: 100vh;
+.contact-main {
   display: flex;
   align-items: center;
-  background: #abbaab;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffffff, #abbaab);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.one {
+.map {
   width: 50%;
   padding: 0px 0px 0px 40px;
 }
 
-.two {
+.contact-form {
   width: 50%;
   text-align: center;
 }
 
-.one iframe {
+.map iframe {
   width: 100%;
   height: 70vh;
   border-radius: 10px;
-
+  border: none;
 }
 
-.two form {
+.contact-form form {
   padding-top: 2rem;
   display: flex;
   justify-content: center;
@@ -36,42 +28,42 @@
   flex-direction: column;
 }
 
-.two form input {
+.contact-form form input,
+.contact-form form textarea {
+  font-size: 18px;
   width: 70%;
   border: none;
   outline: none;
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
+  background: var(--secondaryColor);
 }
 
-.two form textarea {
-  width: 70%;
-  padding: 10px;
+.contact-form form button {
   border-radius: 10px;
-  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
   outline: none;
-}
-
-.two form button {
-  width: 25%;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  background: #200122;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #6f0000, #200122);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #6f0000, #200122);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: 2px solid #d33;
+  background: linear-gradient(#d22, #d11);
   cursor: pointer;
-  color: white;
-  padding: 10px;
-  margin: 10px;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 20px;
+}
+
+.contact-form form button:hover {
+  background: linear-gradient(#c11, #d22);
 }
 
 @media screen and (max-width:768px) {
-  .mein {
+  section.contact .section-title {
+    margin-bottom: 0;
+  }
+
+  .contact-main {
     width: 100%;
     height: auto;
     display: flex;
@@ -80,13 +72,16 @@
     flex-direction: column-reverse;
   }
 
-  .one {
+  .map {
     width: 100%;
     padding: 30px;
 
   }
 
-  .two {
+  .contact-form {
     width: 100%;
+    padding-top: 1rem;
+    margin-top: 0;
+    padding-top: 0;
   }
 }

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+ 
+    <title>jQuery mkinfinite Plugin Demo</title>
+    <style>
+ 
+
+html, body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	 
+	min-width: 999px;
+}
+
+header {
+	height: 100%;
+	position: relative;
+}
+
+header div.content {
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 50%;
+	max-width: none;
+	height: 190px;
+	margin-top: -95px;
+	background: rgba(255,255,255,0.8);
+	text-align: center;
+    font-size: 80px;
+    font-family: impact;
+    
+}
+
+ 
+
+.color-1 {
+	color: #00bfff;
+    line-height: 180px;
+}
+
+.color-2 {
+	color: #ff007f;
+    margin-left: 10px;
+}
+    
+    </style>
+</head>
+	<body>
+		<header>
+			<div class="content">
+				  <span class="color-1">IMAGE</span><span class="color-2">SLIDESHOW</span> </div>
+			 
+		</header>
+    
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		
+		<script type="text/javascript" src="../src/jquery.mkinfinite.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('header').mkinfinite({
+					maxZoom:       1.4,
+					animationTime: 4000,
+					imagesRatio:   (960 / 720),
+					isFixedBG:     true,
+					zoomIn:        true,
+					imagesList:    new Array(
+						'https://images.pexels.com/photos/1368389/pexels-photo-1368389.jpeg?cs=srgb&dl=dawn-dusk-fog-1368389.jpg&fm=jpg',
+						'https://images.pexels.com/photos/1677358/pexels-photo-1677358.jpeg?cs=srgb&dl=aerial-shot-bird-s-eye-view-buildings-1677358.jpg&fm=jpg',
+                        
+						'https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?cs=srgb&dl=architecture-bridge-fog-1141853.jpg&fm=jpg',
+						'https://images.pexels.com/photos/1115487/pexels-photo-1115487.jpeg?cs=srgb&dl=dawn-daylight-hill-1115487.jpg&fm=jpg'
+					)
+				});
+			});
+		</script>
+	</body>
+</html>
