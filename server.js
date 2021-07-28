@@ -2,7 +2,7 @@ if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const session = require('express-session')
-// const MongoStore = require('connect-mongo')
+const MongoStore = require('connect-mongo')
 const flash = require('express-flash')
 const passport = require('passport')
 const routes = require('./routes/routes')
@@ -23,14 +23,14 @@ mongoose.connect(process.env.MONGO_DB_URL, { useNewUrlParser: true, useUnifiedTo
 //mongoose connection end
 
 // MongoSessionStore 
-// const storeOptions = MongoStore.create({
-//   mongoUrl: process.env.MONGO_DB_URL,
-//   dbName: 'userSessions',
-//   mongoOptions: {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   }
-// })
+const storeOptions = MongoStore.create({
+  mongoUrl: process.env.MONGO_DB_URL,
+  dbName: 'userSessions',
+  mongoOptions: {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+})
 
 app.use(session({
   name: 'sessionsForUsers',
