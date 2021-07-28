@@ -1,0 +1,86 @@
+section.auth {
+  color: var(--textColor);
+  background: var(--primaryColor);
+  padding: 40px 0;
+
+  .form-container {
+    background: var(--secondaryColor);
+    max-width: 350px;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+
+    .error {
+      background: rgba(255, 0, 0, 0.2);
+      padding: 5px;
+      color: #f00;
+      border: 1px solid #d00;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin: 10px auto;
+    }
+
+    .input-group {
+      text-align: left;
+    }
+
+    label {
+      margin: 20px 0 0;
+      padding: 5px 10px;
+    }
+
+    input {
+      padding: 5px 10px;
+      font-size: 18px;
+      line-height: 22px;
+      border-radius: 10px;
+      width: 100%;
+      display: block;
+      text-align: left;
+      margin: 5px 0 20px;
+      color: #111;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      background: linear-gradient(#d22, #c11);
+      color: #fff;
+      border: 2px solid #b00;
+      font-size: 18px;
+      padding: 5px 10px;
+      border-radius: 15px;
+      margin: 0 auto;
+      cursor: pointer;
+
+      &:hover {
+        background: linear-gradient(#c11, #d22);
+      }
+    }
+
+    .link {
+      font-size: 16px;
+      color: var(--textColor);
+      display: block;
+      margin: 10px auto;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media screen and (min-width:390px) {
+    padding: 60px 0;
+
+    .form-container {
+      border-radius: 20px;
+    }
+  }
+}

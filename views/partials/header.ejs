@@ -39,6 +39,11 @@
         <a href="/#services">SERVICES</a>
         <a href="/#about">ABOUT US</a>
         <a href="/#contact">CONTACT US</a>
+        <% if (user.name) { %>
+        <a href="/profile">PROFILE</a>
+        <% }else{ %>
+        <a href="/auth/login">LOGIN</a>
+        <% } %>
       </div>
     </div>
   </header>

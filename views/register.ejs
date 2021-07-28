@@ -1,0 +1,25 @@
+<%- include('./partials/header.ejs') %>
+<section class="auth">
+  <div class="form-container">
+    <h1>Register</h1>
+    <form action="/auth/register" method="POST">
+      <% if(messages.error) {%>
+      <div class="error"> <%= messages.error %> </div>
+      <% } %>
+      <div class="input-group">
+        <label for="email">Name</label>
+        <input type="text" class="form-control" name="name">
+
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email">
+
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="pass">
+      </div>
+      <button type="submit">Register</button>
+      <a class="link" href="/auth/login">Already registered? Login here.</a>
+    </form>
+  </div>
+</section>
+
+<%- include('./partials/footer.ejs') %>

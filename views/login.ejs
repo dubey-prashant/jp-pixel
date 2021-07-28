@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs') %>
+
+<section class="auth">
+  <div class="form-container">
+    <h1>Login</h1>
+    <form action="/auth/login" method="POST">
+      <% if(messages.error) {%>
+      <div class="error"> <%= messages.error %> </div>
+      <% } %>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="pass">
+      </div>
+      <button type="submit">Login</button>
+      <a class="link" href="/auth/register">Don't have an account? Register now.</a>
+    </form>
+    <div class="oAuth">
+      <a href="/auth/google">
+        <button>
+          <i class="fab fa-google "></i>&nbsp;
+          CONTINUE WITH GOOGLE
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
+<%- include('./partials/footer.ejs') %>

@@ -5,6 +5,7 @@ header {
   width: 100%;
   z-index: 100;
   background: var(--primaryColor);
+  border-bottom: 1px solid var(--secondaryColor);
 }
 
 header .Navbar {
@@ -130,7 +131,7 @@ header .nav a:hover {
 header .showNav {
   display: block;
   background: var(--primaryColor);
-  border-top: 1px solid var(--white);
+  border-top: 1px solid var(--secondaryColor);
   margin: 0;
 }
 
