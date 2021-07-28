@@ -16,9 +16,10 @@ router.get('/', (req, res) => {
 
 router.get('/profile', (req, res) => {
   if (!req.isAuthenticated()) {
-    res.redirect('/login')
+    res.redirect('/auth/login')
+  } else if (req.isAuthenticated()) {
+    res.render('profile', { user: req.user })
   }
-  res.render('profile', { user: req.user })
 })
 
 module.exports = router

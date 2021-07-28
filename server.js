@@ -22,28 +22,40 @@ mongoose.connect(process.env.MONGO_DB_URL, { useNewUrlParser: true, useUnifiedTo
   }).catch(err => console.log(err))
 //mongoose connection end
 
-// MongoSessionStore 
-const storeOptions = MongoStore.create({
-  mongoUrl: process.env.MONGO_DB_URL,
-  dbName: 'userSessions',
-  mongoOptions: {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-})
+if (process.env.NODE_ENV === 'production') {
+  // MongoSessionStore 
+  const storeOptions = MongoStore.create({
+    mongoUrl: process.env.MONGO_DB_URL,
+    dbName: 'userSessions',
+    mongoOptions: {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  })
 
-app.use(session({
-  name: 'sessionsForUsers',
-  proxy: true,
-  secret: process.env.SESSION_SECRET,
-  resave: true,
-  saveUninitialized: true,
-  cookie: {
-    // secure: true,
-    maxAge: 5 * 60 * 60 * 1000,    //  5 hours in milliseconds
-  },
-  store: storeOptions
-}))
+  app.use(session({
+    name: 'sessionsForUsers',
+    proxy: true,
+    secret: process.env.SESSION_SECRET,
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+      secure: true,
+      maxAge: 5 * 60 * 60 * 1000,    //  5 hours in milliseconds
+    },
+    store: storeOptions
+  }))
+} else {
+  app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+      maxAge: 5 * 60 * 60 * 1000,    //  5 hours in milliseconds
+    }
+  }))
+}
+
 
 app.use(passport.initialize())
 app.use(passport.session())

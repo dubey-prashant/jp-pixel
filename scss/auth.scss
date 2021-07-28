@@ -76,10 +76,38 @@ section.auth {
     }
   }
 
+  .oAuth {
+    background: var(--secondaryColor);
+    max-width: 350px;
+    text-align: center;
+    padding: 20px;
+    margin: 30px auto;
+
+    button {
+      background: linear-gradient(#d22, #c11);
+      color: #fff;
+      border: 2px solid #b00;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 15px;
+      margin: 0 auto;
+      cursor: pointer;
+
+      i {
+        color: #4285F4;
+      }
+
+      &:hover {
+        background: linear-gradient(#c11, #d22);
+      }
+    }
+  }
+
   @media screen and (min-width:390px) {
     padding: 60px 0;
 
-    .form-container {
+    .form-container,
+    .oAuth {
       border-radius: 20px;
     }
   }

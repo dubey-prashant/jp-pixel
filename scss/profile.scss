@@ -1,0 +1,57 @@
+section.profile {
+  color: var(--textColor);
+  background: var(--primaryColor);
+  padding: 40px 0 20px;
+
+  .profile-content {
+    background: var(--secondaryColor);
+    max-width: 350px;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+  }
+
+  h3 {
+    font-size: 25px;
+    margin: 10px auto;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid var(--secondaryColor);
+  }
+
+  .logout {
+    margin: 20px auto;
+
+    button {
+      background: linear-gradient(#d22, #c11);
+      color: #fff;
+      border: 2px solid #b00;
+      font-size: 18px;
+      padding: 5px 10px;
+      border-radius: 15px;
+      margin: 0 auto;
+      cursor: pointer;
+
+      &:hover {
+        background: linear-gradient(#c11, #d22);
+      }
+    }
+  }
+
+  @media screen and (min-width:390px) {
+    padding: 60px 0;
+
+    h3 {
+      font-size: 30px;
+    }
+
+    .profile-content {
+      border-radius: 20px;
+      padding: 30px 20px 20px;
+    }
+  }
+}

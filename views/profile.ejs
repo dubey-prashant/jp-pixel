@@ -1,13 +1,13 @@
 <%- include('./partials/header.ejs') %>
 
 <section class="profile">
-  <div class="profile.content">
+  <div class="profile-content">
     <img src="<%=user.profileImg%>" alt="<%= user.name %>">
     <h3><%= user.name %> </h3>
     <p><%= user.email %></p>
-  </div>
-  <div class="logout">
-    <a href="/auth/logout"><button>Logout</button></a>
+    <div class="logout">
+      <a href="/auth/logout"><button>Logout</button></a>
+    </div>
   </div>
 </section>
 
