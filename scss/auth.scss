@@ -87,7 +87,7 @@ section.auth {
       background: linear-gradient(#d22, #c11);
       color: #fff;
       border: 2px solid #b00;
-      font-size: 20px;
+      font-size: 18px;
       padding: 10px;
       border-radius: 15px;
       margin: 0 auto;
@@ -109,6 +109,12 @@ section.auth {
     .form-container,
     .oAuth {
       border-radius: 20px;
+    }
+
+    font-size: 18px;
+
+    .oAuth button {
+      font-size: 20px;
     }
   }
 }
