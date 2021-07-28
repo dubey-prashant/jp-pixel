@@ -33,16 +33,16 @@ mongoose.connect(process.env.MONGO_DB_URL, { useNewUrlParser: true, useUnifiedTo
 // })
 
 app.use(session({
-  // name: 'sessionsForUsers',
-  // proxy: true,
+  name: 'sessionsForUsers',
+  proxy: true,
   secret: process.env.SESSION_SECRET,
   resave: true,
   saveUninitialized: true,
-  // cookie: {
-  //   // secure: true,
-  //   maxAge: 5 * 60 * 60 * 1000,    //  5 hours in milliseconds
-  // },
-  // store: storeOptions
+  cookie: {
+    // secure: true,
+    maxAge: 5 * 60 * 60 * 1000,    //  5 hours in milliseconds
+  },
+  store: storeOptions
 }))
 
 app.use(passport.initialize())
