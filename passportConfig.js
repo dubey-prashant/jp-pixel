@@ -120,55 +120,6 @@ passport.use(new GoogleStrategy(
   }
 ))
 // Google Strategy End
-// // Facebook Strategy Start
-// passport.use(new FacebookStrategy({
-//   clientID: process.env.FACEBOOK_APP_ID,
-//   clientSecret: process.env.FACEBOOK_APP_SECRET,
-//   callbackURL: "https://secrets-dt.herokuapp.com/auth/facebook/redirect",
-//   profileFields: ['email', 'photos', 'gender']
-// },
-//   function (accessToken, refreshToken, profile, done) {
-
-//     User.findOne({ facebookId: profile.id }, (err, user) => {
-//       if (err) {
-//         return done(err)
-//       }
-//       if (user) {
-//         return done(null, user)
-//       }
-//       if (!user) {
-//         User.findOne({ email: profile.emails[0].value }, (error, userWithSameEmail) => {
-//           if (error) return done(error)
-//           if (userWithSameEmail) {
-//             userWithSameEmail.facebookId = profile.id
-//             userWithSameEmail.profileImg = profile.photos[0].value
-//             userWithSameEmail.save()
-//               .then(updatedUser => {
-//                 return done(null, updatedUser)
-//               }).catch(errorUp => {
-//                 return done(errorUp)
-//               })
-//           }
-//           if (!userWithSameEmail) {
-//             User.create({
-//               name: profile.givenName,
-//               email: profile.emails[0].value,
-//               facebookId: profile.id,
-//               profileImg: profile.photos[0].value
-//             })
-//               .then(newUser => {
-//                 return done(null, newUser)
-//               }).catch(errorCr => {
-//                 return done(errorCr)
-//               })
-//           }
-//         })
-//       }
-//     })
-//   }
-// ))
-
-// // Facebook Strategy End
 
 // Serialize and deserialize
 passport.serializeUser((user, done) => {
