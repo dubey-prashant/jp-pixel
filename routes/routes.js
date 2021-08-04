@@ -5,10 +5,8 @@ const testimonials = require('../data/testimonials')
 
 router.get('/', (req, res) => {
   if (req.isAuthenticated()) {
-    console.log('req.isAuthenticated()')
     res.render('home', { user: req.user, services: services, works: works, testimonials: testimonials })
   } else {
-    console.log('!!req.isAuthenticated()')
     res.render('home', { user: 'null', services: services, works: works, testimonials: testimonials })
   }
 })
