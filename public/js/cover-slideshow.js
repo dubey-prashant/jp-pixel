@@ -7,7 +7,7 @@ const imageList = ['/images/cover-bg.jpg', '/images/cover-bg2.jpg', '/images/cov
 
 // DON'T CHANGE THE CODE BELOW
 $(document).ready(function () {
-  $('.cover').mkinfinite({
+  $('.cover').dubeytech({
     maxZoom: 1.4,
     animationTime: 3000,
     imagesRatio: (1200 / 720),

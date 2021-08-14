@@ -1,5 +1,5 @@
 (function ($) {
-	jQuery.fn.mkinfinite = function (options) {
+	jQuery.fn.dubeytech = function (options) {
 		var options = $.extend({
 			maxZoom: 1.25,
 			imagesRatio: 1.5,
@@ -24,7 +24,7 @@
 				'background-position': '50% 50%',
 				'background-repeat': 'no-repeat'
 			});
-			$object.addClass('mkinfinite');
+			$object.addClass('dubeytech');
 			if (options.imagesList.length > 1) {
 				calculateZoom(currentImage);
 			}
