@@ -11,7 +11,7 @@ section.about {
     width: 55%;
     float: right;
     background-color: var(--secondaryColor);
-    padding: 150px;
+    padding: 100px;
   }
 
   .inner-container h1 {
@@ -37,7 +37,7 @@ section.about {
 
   @media screen and (max-width:1200px) {
     .inner-container {
-      padding: 80px;
+      padding: 50px;
     }
   }
 
@@ -58,7 +58,7 @@ section.about {
     }
 
     .inner-container {
-      padding: 60px;
+      padding: 30px;
     }
   }
 }
