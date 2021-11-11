@@ -74,14 +74,17 @@
 
   .map {
     width: 100%;
-    padding: 30px;
-
+    padding: 0;
+    margin: 0;
   }
 
   .contact-form {
     width: 100%;
     padding-top: 1rem;
-    margin-top: 0;
-    padding-top: 0;
+  }
+
+  .contact-form form input,
+  .contact-form form textarea {
+    width: 100%;
   }
 }

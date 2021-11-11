@@ -24,25 +24,21 @@ mongoose.connect(process.env.MONGO_DB_URL, { useNewUrlParser: true, useUnifiedTo
 
 if (process.env.NODE_ENV == 'production') {
   // MongoSessionStore 
-  const storeOptions = MongoStore.create({
-    mongoUrl: process.env.MONGO_DB_URL,
-    dbName: 'userSessions',
-    mongoOptions: {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  })
 
   app.use(session({
-    name: 'sessionsForUsers',
-    proxy: true,
     secret: process.env.SESSION_SECRET,
-    resave: true,
+    resave: false,
     saveUninitialized: true,
-    cookie: {
-      maxAge: 5 * 60 * 60 * 1000,    //  5 hours in milliseconds
-    },
-    store: storeOptions
+    store: new MongoStore({
+      url: process.env.MONGO_DB_URL,
+      dbName: 'userSessions',
+      mongoOptions: {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      },
+      ttl: 14 * 24 * 60 * 60,
+      autoRemove: 'native'
+    })
   }))
 } else {
   app.use(session({
