@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGO_DB_URL, { useNewUrlParser: true, useUnifiedTo
   }).catch(err => console.log(err))
 //mongoose connection end
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV == 'production') {
   // MongoSessionStore 
   const storeOptions = MongoStore.create({
     mongoUrl: process.env.MONGO_DB_URL,
@@ -40,7 +40,6 @@ if (process.env.NODE_ENV === 'production') {
     resave: true,
     saveUninitialized: true,
     cookie: {
-      secure: true,
       maxAge: 5 * 60 * 60 * 1000,    //  5 hours in milliseconds
     },
     store: storeOptions

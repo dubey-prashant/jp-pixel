@@ -114,16 +114,16 @@ body {
   }
 }
 
-@import "./views/header.scss";
-@import "./views/home.scss";
-@import "./views/about.scss";
-@import "./views/services.scss";
-@import "./views/works.scss";
-@import "./views/testimonials.scss";
-@import "./views/contact.scss";
-@import "./views/footer.scss";
-@import "./auth.scss";
-@import "./profile.scss";
+@import "./views/_header.scss";
+@import "./views/_home.scss";
+@import "./views/_about.scss";
+@import "./views/_services.scss";
+@import "./views/_works.scss";
+@import "./views/_testimonials.scss";
+@import "./views/_contact.scss";
+@import "./views/_footer.scss";
+@import "./_auth.scss";
+@import "./_profile.scss";
 
 // SCROLL background
 ::-webkit-scrollbar {
