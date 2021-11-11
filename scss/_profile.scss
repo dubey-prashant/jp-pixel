@@ -1,7 +1,7 @@
 section.profile {
   color: var(--textColor);
   background: var(--primaryColor);
-  padding: 40px 0 20px;
+  padding: 80px 0 40px;
 
   .profile-content {
     background: var(--secondaryColor);
@@ -43,7 +43,7 @@ section.profile {
   }
 
   @media screen and (min-width:390px) {
-    padding: 60px 0;
+    padding: 100px 0 40px;
 
     h3 {
       font-size: 30px;
