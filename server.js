@@ -30,7 +30,7 @@ if (process.env.NODE_ENV == 'production') {
     resave: false,
     saveUninitialized: true,
     store: new MongoStore({
-      url: process.env.MONGO_DB_URL,
+      mongoUrl: process.env.MONGO_DB_URL,
       dbName: 'userSessions',
       mongoOptions: {
         useNewUrlParser: true,
